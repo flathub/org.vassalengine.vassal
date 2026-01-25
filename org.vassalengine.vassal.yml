@@ -42,6 +42,10 @@ modules:
         url: https://github.com/vassalengine/vassal.git
         commit: fb902e34bf5e2122fa5fddc656366f1b3483f08c
         tag: '3.7.19'
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/vassalengine/vassal/releases/latest
+          tag-query: .tag_name
       - type: patch
         path: patches/use-system-mvn.patch
       - type: patch
