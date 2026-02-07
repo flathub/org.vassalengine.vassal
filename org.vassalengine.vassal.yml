@@ -40,7 +40,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/vassalengine/vassal.git
-        commit: fb902e34bf5e2122fa5fddc656366f1b3483f08c
+        commit: 0a9ea538b6a3d17f74b4f09ca607f4e355feb93f
       - type: patch
         path: patches/use-system-mvn.patch
       - type: patch
