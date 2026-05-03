@@ -31,6 +31,22 @@ The update should then, once the script has run,
   ```
 - Open a pull request against the parent repository.
 
+## How to test build and install this package 
+
+1. Install needed environments 
+
+   ```
+   $ flatpak install --user \
+         org.freedesktop.Platform \
+         org.freedesktop.Sdk  \
+         org.freedesktop.Sdk.Extension.openjdk25
+   ```
+   and pick the latest versions 
+2. Build and install for user 
+   ```
+   $ flatpak-builder --install --user --force-clean build  org.vassalengine.vassal.yml
+   ```
+
 <!-- Local Variables: -->
 <!-- eval: (auto-fill-mode 0) -->
 <!-- eval: (visual-line-mode) -->
