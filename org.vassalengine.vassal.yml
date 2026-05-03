@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk25
+  - org.freedesktop.Sdk.Extension.openjdk26
 command: vassal
 
 finish-args:
@@ -19,16 +19,16 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk25/install.sh
+      - /usr/lib/sdk/openjdk26/install.sh
 
   - name: vassal
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/openjdk25/bin
+      append-path: /usr/lib/sdk/openjdk26/bin
       env:
         MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
     build-commands:
-      - make jar SKIPS="-Dasciidoctor.skip=true -Dspotbugs.skip=true -Dlicense.skipDownloadLicenses -Dclirr.skip=true -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dmaven.test.skip=true" MVN="mvn -Dmaven.repo.local=.m2/repository" MAVEN_VERSION=3.7.21 
+      - make jar SKIPS="-Dasciidoctor.skip=true -Dspotbugs.skip=true -Dlicense.skipDownloadLicenses -Dclirr.skip=true -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dmaven.test.skip=true" MVN="mvn -Dmaven.repo.local=.m2/repository" MAVEN_VERSION=3.7.22 
       - mv release-prepare/target/lib ${FLATPAK_DEST}
       - mv release-prepare/target/doc ${FLATPAK_DEST}
       - install -Dm644 vassal-app/src/main/resources/icons/scalable/VASSAL.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
@@ -43,8 +43,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/vassalengine/vassal.git
-        commit: 5d115a62cad330fc420d211119528a3c5ff6d843
-        tag: 3.7.21
+        commit: 692410a82153813ce5638b6240ef64c5ba0c4696
+        tag: 3.7.22
         x-checker-data:
           type: json
           url: https://api.github.com/repos/vassalengine/vassal/releases/latest
