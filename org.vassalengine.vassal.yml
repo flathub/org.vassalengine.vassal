@@ -1,6 +1,5 @@
 id: org.vassalengine.vassal
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk25
