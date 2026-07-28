@@ -1180,10 +1180,6 @@
   sha256: 8f2ae3b0935fc413455c4dba8e45016c7fda91dbdee5ab35f0ed5cf575751496
 - type: file
   dest: .m2/repository/junit/junit/4.11-beta-1
-  url: https://repo.maven.apache.org/maven2/junit/junit/4.11-beta-1/junit-4.11-beta-1.jar
-  sha256: 3dca0613d2227a6a167b6a9bdc0b89f2450f257aec24e0dd30f6c37d5ffc6069
-- type: file
-  dest: .m2/repository/junit/junit/4.11-beta-1
   url: https://repo.maven.apache.org/maven2/junit/junit/4.11-beta-1/junit-4.11-beta-1.pom
   sha256: 00a065f8e52f72ad432dcf3faecc89b2e90dab1aef746d486f77c6e3ae52babd
 - type: file
