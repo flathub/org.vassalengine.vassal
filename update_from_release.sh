@@ -96,7 +96,7 @@ Add the changed files
 
 Commit
 
-  git commit -m "Update for ${release}"
+  git commit -m "Updated for ${release}"
 
 Push
 
