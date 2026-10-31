@@ -43,7 +43,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/vassalengine/vassal.git
-        commit: 0dfe4eed6ec47e8afefc95dbd827b2ccbf05cefa
+        commit: 05a3a19cc4b2deac54b7558d3e576fdfdcce96ff
         tag: 3.8.0
         x-checker-data:
           type: json
