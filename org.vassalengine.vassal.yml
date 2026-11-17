@@ -28,7 +28,7 @@ modules:
       env:
         MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
     build-commands:
-      - make jar SKIPS="-Dasciidoctor.skip=true -Dspotbugs.skip=true -Dlicense.skipDownloadLicenses -Dclirr.skip=true -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dmaven.test.skip=true" MVN="mvn -Dmaven.repo.local=.m2/repository" MAVEN_VERSION=3.8.1 
+      - make jar SKIPS="-Dasciidoctor.skip=true -Dspotbugs.skip=true -Dlicense.skipDownloadLicenses -Dclirr.skip=true -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dmaven.test.skip=true" MVN="mvn -Dmaven.repo.local=.m2/repository" MAVEN_VERSION=3.8.2 
       - mv release-prepare/target/lib ${FLATPAK_DEST}
       - mv release-prepare/target/doc ${FLATPAK_DEST}
       - install -Dm644 vassal-app/src/main/resources/icons/scalable/VASSAL.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
@@ -43,8 +43,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/vassalengine/vassal.git
-        commit: 915dab19835bbcd57d7d61da6e63365d706ff28e
-        tag: 3.8.1
+        commit: 03db78b4383c5b328fd9c29ec0720c06b4989ef6
+        tag: 3.8.2
         x-checker-data:
           type: json
           url: https://api.github.com/repos/vassalengine/vassal/releases/latest
